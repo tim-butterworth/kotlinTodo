@@ -1,0 +1,10 @@
+rootProject.name = 'stufftodo'
+
+include("core")
+project(":core").projectDir = file("application/core")
+
+include("adapters")
+project(":adapters").projectDir = file("application/adapters")
+
+include("runner")
+project(":runner").projectDir = file("application/runner")

@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "id": "urn:jsonschema:tim:todo:intentions:ToDo",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": ["id"],
+  "additionalProperties": false
+}
