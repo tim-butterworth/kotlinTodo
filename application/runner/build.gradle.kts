@@ -59,12 +59,12 @@ tasks.withType<Jar> {
     archiveFileName.set("todoer.jar")
     from(
         configurations.runtimeClasspath.get().map {
+            println("------> $it")
             if (it.isDirectory) {
                 it
             } else zipTree(it)
         }
-        , {
-            exclude("META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA")
-        }
-    )
+    ) {
+        exclude("META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA")
+    }
 }
